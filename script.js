@@ -71,11 +71,9 @@ function goodInput(){
 function reset() {
   let input = document.querySelector('#size').value;
   size = Math.round(+input);
-  console.log(typeof size, size);
   if (isNaN(size) || size === 0) return wrongInput();
   else goodInput();
   let items = document.querySelectorAll('.item');
-  items.forEach(x => x.classList.remove('black'));
   container.innerHTML = "";
   container.style.gridTemplateRows =`repeat(${size}, 1fr)`;
   container.style.gridTemplateColumns =`repeat(${size}, 1fr)`;
@@ -84,8 +82,7 @@ function reset() {
     item.classList.add('item');
     container.appendChild(item);
   }
-  items = document.querySelectorAll('.item');
-  items.forEach(x => x.addEventListener('mouseover', addBlack));
+  changeBehaviour();
   document.querySelector('#current-size').textContent = `${size}`;
 }
 
