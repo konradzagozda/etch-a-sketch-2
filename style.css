@@ -3,12 +3,12 @@
 html {
   box-sizing: content-box;
   font-family: 'PT Sans Narrow', sans-serif;
+  background-color: rgb(251, 244, 255);
 }
 
 .flex {
   display: flex;
-  justify-content: center;
-  background-color: rgb(251, 244, 255);
+  justify-content: center;;
 }
 #size {
   background-color: rgb(247, 234, 255);
